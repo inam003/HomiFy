@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "houseName": "House 1",
+    "price": "100",
+    "location": "United Arab Emirates",
+    "rating": "4",
+    "photo": "/images/house1.png"
+  },
+  {
+    "id": 2,
+    "houseName": "House 2",
+    "price": "200",
+    "location": "Dubai",
+    "rating": "5",
+    "photo": "/images/house2.png"
+  },
+  {
+    "houseName": "House 3",
+    "price": "300",
+    "location": "Pakistan",
+    "rating": "5",
+    "photo": "https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?cs=srgb&dl=pexels-binyaminmellish-106399.jpg&fm=jpg",
+    "id": "0.44491531542189966"
+  }
+]
