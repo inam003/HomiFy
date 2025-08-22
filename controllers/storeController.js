@@ -51,7 +51,6 @@ exports.getFavouritesList = (req, res) => {
       const favouriteHomes = registeredHomes.filter((home) =>
         favourites.includes(home.id.toString())
       );
-      console.log(favouriteHomes);
 
       res.render("store/favourite-list", {
         favouriteHomes: favouriteHomes,

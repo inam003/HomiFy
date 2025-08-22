@@ -17,10 +17,10 @@
   },
   {
     "houseName": "House 3",
-    "price": "300",
-    "location": "Pakistan",
-    "rating": "5",
-    "photo": "https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?cs=srgb&dl=pexels-binyaminmellish-106399.jpg&fm=jpg",
-    "id": "0.44491531542189966"
+    "price": "350",
+    "location": "Oman, UAE",
+    "rating": "4.9",
+    "photo": "/images/house6.png",
+    "id": "0.1011200624083135"
   }
 ]
