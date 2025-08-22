@@ -1,6 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 const rootPath = require("../utils/path");
+const Favourite = require("./favourite");
 
 const filePath = path.join(rootPath, "data", "homes.json");
 
@@ -42,6 +43,18 @@ module.exports = class Home {
     this.fetchAll((homes) => {
       const home = homes.find((home) => home.id == id);
       callback(home);
+    });
+  }
+
+  static deleteById(id, callback) {
+    this.fetchAll((homes) => {
+      homes = homes.filter((home) => home.id.toString() !== id);
+      fs.writeFile(filePath, JSON.stringify(homes), (error) => {
+        Favourite.deleteById(id, callback);
+        if (error) {
+          console.error("Error writing file:", error);
+        }
+      });
     });
   }
 };

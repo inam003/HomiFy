@@ -26,7 +26,6 @@ exports.getEditHome = (req, res) => {
       console.log("Home not found");
       return res.redirect("/host/host-home-list");
     }
-    console.log(homeId, editing, home);
     res.render("host/edit-home", {
       home: home,
       title: "Edit Home - Airbnb",
@@ -47,9 +46,18 @@ exports.postEditHome = (req, res) => {
   const { id, houseName, price, location, rating, photo } = req.body;
   const home = new Home(houseName, price, location, rating, photo);
   home.id = id;
-  console.log(home);
   home.save();
   console.log(home);
 
   res.redirect("/host/host-home-list");
+};
+
+exports.postDeleteHome = (req, res) => {
+  const homeId = req.params.id;
+  Home.deleteById(homeId, (error) => {
+    if (error) {
+      console.log("Error deleting home:", error);
+    }
+    res.redirect("/host/host-home-list");
+  });
 };

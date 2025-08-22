@@ -42,18 +42,22 @@
                 <span class="text-gray-700"><%= home.rating %></span>
               </div>
             </div>
-            <a href="/host/edit-home/<%= home.id %>?editing=true">
-              <button
-                class="bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-2 px-4 rounded-lg transition duration-300 cursor-pointer"
-              >
-                Edit
-              </button>
-            </a>
-            <button
-              class="bg-red-600 hover:bg-red-700 text-white font-semibold py-2 px-4 rounded-lg transition duration-300 cursor-pointer"
-            >
-              Delete
-            </button>
+            <div class="flex items-center gap-2 mt-2">
+              <a href="/host/edit-home/<%= home.id %>?editing=true">
+                <button
+                  class="bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-2 px-4 rounded-lg transition duration-300 cursor-pointer"
+                >
+                  Edit
+                </button>
+              </a>
+              <form action="/host/delete-home/<%= home.id %>" method="POST">
+                <button
+                  class="bg-red-600 hover:bg-red-700 text-white font-semibold py-2 px-4 rounded-lg transition duration-300 cursor-pointer"
+                >
+                  Delete
+                </button>
+              </form>
+            </div>
           </div>
         </div>
         <% }) %>

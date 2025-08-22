@@ -70,3 +70,13 @@ exports.postAddToFavourites = (req, res) => {
     res.redirect("/favourites");
   });
 };
+
+exports.postDeleteFavourite = (req, res) => {
+  const id = req.params.id;
+  Favourite.deleteById(id, (err) => {
+    if (err) {
+      console.error("Error deleting from favourites:", err);
+    }
+    res.redirect("/favourites");
+  });
+};
